@@ -17,15 +17,22 @@ apply plugin: 'io.spring.dependency-management'
 
 group = 'cn.dreamcatchers'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = 1.8
+sourceCompatibility = 10
 
 repositories {
     mavenCentral()
 }
 
-
+configurations {
+    all*.exclude module: 'spring-boot-starter-tomcat'
+}
 dependencies {
+    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-devtools
+    compile group: 'org.springframework.boot', name: 'spring-boot-devtools', version: '2.0.4.RELEASE'
+    // https://mvnrepository.com/artifact/com.google.guava/guava
+    compile group: 'com.google.guava', name: 'guava', version: '26.0-jre'
     compile('org.springframework.boot:spring-boot-starter-data-mongodb-reactive')
+    compile('org.springframework.boot:spring-boot-starter-undertow')
     compile('org.springframework.boot:spring-boot-starter-webflux')
     compileOnly('org.projectlombok:lombok')
     testCompile('org.springframework.boot:spring-boot-starter-test')

@@ -1,0 +1,5 @@
+fastFile:
+  mongo:
+    connectionString: mongodb://localhost
+    port: 27017
+    landingDatabase: fastfile

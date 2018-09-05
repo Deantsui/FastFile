@@ -4,7 +4,9 @@
 Fast File Server is a file server system based on MongoDB.
 
 It's using some very popular technology like:
+- JAVA 10
 - MongoDB
+- GridFs
 - SpringBoot2.0.4
 - SpringWebflux
 - MongodbReactive
